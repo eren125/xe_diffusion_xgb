@@ -23,6 +23,22 @@ X_test, y_test, group_test = df_test.iloc[:,3:], df_test['Diffusion_coefficient_
 
 feature_names = X_train.columns
 
+#%%
+# Load ML model
+filename = 'model/final_diffusion_model.sav'
+xgb_reg = pickle.load(open(filename, 'rb'))
+
+y_pred_train = xgb_reg.predict(X_train.to_numpy())
+df_train = pd.DataFrame(data={'pred':y_pred_train, 'true':y_train.to_numpy()},index=y_train.index).dropna()
+
+y_pred_test = xgb_reg.predict(X_test.to_numpy())
+df_test = pd.DataFrame(data={'pred':y_pred_test, 'true':y_test.to_numpy()},index=y_test.index).dropna()
+
+# %%
+fig, ax = plt.subplots(figsize=(12,14))
+xgb.plot_importance(xgb_reg,ax=ax)
+plt.show()
+
 # %%
 explainerModel = shap.TreeExplainer(xgb_reg)
 X_shap = X_test
