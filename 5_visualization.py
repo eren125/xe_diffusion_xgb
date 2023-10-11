@@ -40,7 +40,7 @@ plt.ylabel(r"logarithm log$_{10}$(D) of the diffusion coefficeint in cm$^2$/s")
 plt.xlabel(r"PLD defined using the UFF-based radii [$\AA$]")
 clb = f.colorbar(points)
 clb.ax.set_title(r"E_a [kj/mol]",fontsize=8)
-plt.savefig('plot/difflog_Df-uff298K_barrier.pdf', dpi=240)
+plt.savefig('plot/difflog_Df-uff298K_barrier.jpeg', dpi=240)
 
 # %%
 data = df[["D_f_vdw_uff298","Diffusion_coefficient_log10","barrier_kjmol"]].sort_values(by="barrier_kjmol",ascending=True)
@@ -57,7 +57,7 @@ plt.ylabel(r"log$_{10}$(D) [cm$^2$/s]")
 plt.xlabel(r"Free sphere diameter (new definition) [$\AA$]")
 clb = f.colorbar(points)
 clb.ax.set_title(r"Barrier energy [kj/mol]",fontsize=8)
-plt.savefig('plot/difflog_Df-uff298K_barrier_zoom.pdf', dpi=240)
+plt.savefig('plot/difflog_Df-uff298K_barrier_zoom.jpeg', dpi=240)
 
 # %%
 data = df[["D_f_vdw_uff298","Diffusion_coefficient_log10","barrier_kjmol"]].sort_values(by="D_f_vdw_uff298",ascending=False)
@@ -75,7 +75,7 @@ plt.ylabel(r"log$_{10}$(D) [cm$^2$/s]")
 plt.xlabel(r"Barrier energy [kj/mol]")
 clb = f.colorbar(points)
 clb.ax.set_title(r"PLD [$\AA$]",fontsize=8)
-plt.savefig('plot/difflog_barrier_Df_uff.pdf', dpi=240)
+plt.savefig('plot/difflog_barrier_Df_uff.jpeg', dpi=240)
 
 # %%
 data = df[["D_f_vdw_uff298","Diffusion_coefficient_log10","barrier_kjmol"]].sort_values(by="D_f_vdw_uff298",ascending=True)
@@ -93,7 +93,7 @@ plt.ylabel(r"log$_{10}$(D) [cm$^2$/s]")
 plt.xlabel(r"Barrier energy [kj/mol]")
 clb = f.colorbar(points)
 clb.ax.set_title(r"PLD [$\AA$]",fontsize=8)
-plt.savefig('plot/difflog_barrier_Df_uff_2.pdf', dpi=240)
+plt.savefig('plot/difflog_barrier_Df_uff_2.jpeg', dpi=240)
 
 # %%
 df["s_0_log"] = np.log10(df['s_0'])
@@ -112,7 +112,7 @@ plt.ylabel(r"log$_{10}$(D) [cm$^2$/s]")
 plt.xlabel(r"Free sphere diameter (PLD$_{{CCDC}}$) [$\AA$]")
 clb = f.colorbar(points)
 clb.ax.set_title(r"$\log_{10}(s_0)$",fontsize=8)
-plt.savefig('plot/D_log-diameter_ccdc_colored_s_+.pdf', dpi=240)
+plt.savefig('plot/D_log-diameter_ccdc_colored_s_+.jpeg', dpi=240)
 
 # %%
 df["s_0_log"] = np.log10(df['s_0'])
@@ -134,7 +134,7 @@ plt.ylabel(r"log$_{10}$(D) [cm$^2$/s]")
 plt.xlabel(r"Free sphere diameter (PLD$_{{UFF}}$) [$\AA$]")
 clb = f.colorbar(points)
 clb.ax.set_title(r"$\log_{10}(s_0)$",fontsize=8)
-plt.savefig('plot/D_log-diameter_colored_s_+.pdf', dpi=240)
+plt.savefig('plot/D_log-diameter_colored_s_+.jpeg', dpi=240)
 
 # %%
 df["s_0_log"] = np.log10(df['s_0'])
@@ -153,7 +153,7 @@ plt.ylabel(r"log$_{10}$(D) [cm$^2$/s]")
 plt.xlabel(r"Void Fraction for a $2$ $\AA$-radius probe")
 clb = f.colorbar(points)
 clb.ax.set_title(r"$\log_{10}(s_0)$",fontsize=8)
-plt.savefig('plot/D_log-vf_2_s_+.pdf', dpi=240)
+plt.savefig('plot/D_log-vf_2_s_+.jpeg', dpi=240)
 
 # %%
 df["s_0_log"] = np.log10(df['s_0'])
@@ -171,7 +171,7 @@ plt.ylabel(r"log$_{10}$(D) [cm$^2$/s]")
 plt.xlabel(r"Accessible surface area for a $1.2$ $\AA$-radius probe")
 clb = f.colorbar(points)
 clb.ax.set_title(r"$\log_{10}(s_0)$",fontsize=8)
-plt.savefig('plot/D_log-sa_12_s_+.pdf', dpi=240)
+plt.savefig('plot/D_log-sa_12_s_+.jpeg', dpi=240)
 
 # %%
 df["s_0_log"] = np.log10(df['s_0'])
@@ -189,7 +189,7 @@ plt.ylabel(r"log$_{10}$(D) [cm$^2$/s]")
 plt.xlabel(r"Xenon adsorption enthalpy at infinite dilution (Widom insertion)")
 clb = f.colorbar(points)
 clb.ax.set_title(r"$\log_{10}(s_0)$",fontsize=8)
-plt.savefig('plot/D_log-H_Xe_s_+.pdf', dpi=240)
+plt.savefig('plot/D_log-H_Xe_s_+.jpeg', dpi=240)
 
 # %%
 df["s_0_log"] = np.log10(df['s_0'])
@@ -207,7 +207,7 @@ plt.ylabel(r"log$_{10}$(D) [cm$^2$/s]")
 plt.xlabel(r"D$_{if}$ [$\AA$]")
 clb = f.colorbar(points)
 clb.ax.set_title(r"$\log_{10}(s_0)$",fontsize=8)
-plt.savefig('plot/D_log-lcd_s_+.pdf', dpi=240)
+plt.savefig('plot/D_log-lcd_s_+.jpeg', dpi=240)
 
 # %%
 df["s_0_log"] = np.log10(df['s_0'])
@@ -225,7 +225,7 @@ plt.ylabel(r"log$_{10}$(D) [cm$^2$/s]")
 plt.xlabel(r"Framework Density [kg/m^3]")
 clb = f.colorbar(points)
 clb.ax.set_title(r"$\log_{10}(s_0)$",fontsize=8)
-plt.savefig('plot/D_log-density_s_+.pdf', dpi=240)
+plt.savefig('plot/D_log-density_s_+.jpeg', dpi=240)
 
 # %%
 df["s_0_log"] = np.log10(df['s_0'])
@@ -243,7 +243,7 @@ plt.ylabel(r"log$_{10}$(D) [cm$^2$/s]")
 plt.xlabel(r"Framework Mass (g/mol)")
 clb = f.colorbar(points)
 clb.ax.set_title(r"$\log_{10}(s_0)$",fontsize=8)
-plt.savefig('plot/D_log-mass_s_+.pdf', dpi=240)
+plt.savefig('plot/D_log-mass_s_+.jpeg', dpi=240)
 
 # %%
 df["s_0_log"] = np.log10(df['s_0'])
@@ -261,7 +261,7 @@ plt.ylabel(r"log$_{10}$(D) [cm$^2$/s]")
 plt.xlabel(r"Mean channel dimension")
 clb = f.colorbar(points)
 clb.ax.set_title(r"$\log_{10}(s_0)$",fontsize=8)
-plt.savefig('plot/D_log-channdim_s_+.pdf', dpi=240)
+plt.savefig('plot/D_log-channdim_s_+.jpeg', dpi=240)
 
 # %%
 data = df[["chan_mean_dim","Diffusion_coefficient_log10","D_f_vdw_uff298"]]
@@ -277,7 +277,7 @@ plt.ylim(top=-3.3,bottom=-11)
 plt.ylabel(r"log$_{10}$(D) [cm$^2$/s]")
 plt.xlabel(r"PLD$_{UFF}$")
 plt.title("(a) 1D channel")
-plt.savefig('plot/D_log-PLD_1D_chan.pdf', dpi=240)
+plt.savefig('plot/D_log-PLD_1D_chan.jpeg', dpi=240)
 
 # %%
 data = df[["chan_mean_dim","Diffusion_coefficient_log10","D_f_vdw_uff298"]]
@@ -293,7 +293,7 @@ plt.ylim(top=-3.3,bottom=-11)
 plt.ylabel(r"log$_{10}$(D) [cm$^2$/s]")
 plt.xlabel(r"PLD$_{UFF}$")
 plt.title("(b) 2D channel")
-plt.savefig('plot/D_log-PLD_2D_chan.pdf', dpi=240)
+plt.savefig('plot/D_log-PLD_2D_chan.jpeg', dpi=240)
 
 # %%
 data = df[["chan_mean_dim","Diffusion_coefficient_log10","D_f_vdw_uff298"]]
@@ -309,7 +309,7 @@ plt.ylim(top=-3.3,bottom=-11)
 plt.ylabel(r"log$_{10}$(D) [cm$^2$/s]")
 plt.xlabel(r"PLD$_{UFF}$")
 plt.title("(c) 3D channel")
-plt.savefig('plot/D_log-PLD_3D_chan.pdf', dpi=240)
+plt.savefig('plot/D_log-PLD_3D_chan.jpeg', dpi=240)
 
 # %%
 plt.title("(a) 1D channels")
