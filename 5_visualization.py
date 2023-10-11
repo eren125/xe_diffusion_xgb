@@ -354,3 +354,14 @@ plt.title("(b) 2D channel")
 # plt.savefig('plot/D_log-PLD_2D_chan.pdf', dpi=240)
 
 # %%
+# Correlation plots
+sns.pairplot(df[["Diffusion_coefficient_log10"]+feature_names])
+
+# %%
+import matplotlib
+matplotlib.rcParams.update({'font.size': 16})
+sns.pairplot(df,vars=["Diffusion_coefficient_log10"]+feature_names[:-3], hue='1D_chan', corner=True)
+plt.legend(loc='upper right', bbox_to_anchor=(-2, 0.5)
+)
+plt.savefig('plot/pairplot_1Dchan.jpg', dpi=244)
+# %%
